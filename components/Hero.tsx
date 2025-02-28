@@ -482,15 +482,15 @@ const Hero = () => {
         >
           <TypewriterEffect
          words={[
-          { text: "Rhythm", className: "text-[#FCFB54]" },
-          { text: "Aphale", className: "text-[#FCFB54]" },
-          { text: "|", className: "text-[#FCFB54]" },
-          { text: "Engineering", className: "text-[#FCFB54]" },
-          { text: "the", className: "text-[#FCFB54]" },
-          { text: "Future", className: "text-[#FCFB54]" },
-          { text: "of", className: "text-[#FCFB54]" },
-          { text: "Web", className: "text-[#FCFB54]" },
-          { text: "Innovation", className: "text-[#FCFB54]" },
+          { text: "Rhythm", className: "text-white-400" },
+          { text: "Aphale", className: "text-white-400" },
+          { text: "|", className: "text-white-500" },
+          { text: "Engineering", className: "text-white-400" },
+          { text: "the", className: "text-white-400" },
+          { text: "Future", className: "text-white-500" },
+          { text: "of", className: "text-white-500" },
+          { text: "Web", className: "text-white-500" },
+          { text: "Innovation", className: "text-white-500" },
         ]}
         
             className="text-lg md:text-3xl font-semibold"
