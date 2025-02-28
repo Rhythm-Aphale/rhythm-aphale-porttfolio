@@ -3,7 +3,7 @@ import React from "react";
 import { Spotlight } from "./ui/spotlight-new";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
-import { ArrowRight, Github, Instagram, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Define static configurations for initial render
@@ -142,48 +142,31 @@ const Hero = () => {
     >
       <Spotlight />
 
-      {/* Social Icons */}
-      {/* Modified Social Icons Section - Place this below the buttons */}
-{/* Enhanced Social Icons Section */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 2.2, duration: 0.8 }}
-  className="mt-12 flex justify-center gap-10 z-20 relative group"
->
-  {/* Shared Animated Background */}
-  <motion.div
-    className="absolute inset-0 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"
-    style={{
-      background: `linear-gradient(90deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
-    }}
-    animate={{
-      background: [
-        `linear-gradient(90deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
-        `linear-gradient(180deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
-        `linear-gradient(270deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
-        `linear-gradient(360deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
-      ],
-    }}
-    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-  />
+        
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2.2, duration: 0.8 }}
+      className="mt-12 flex justify-center gap-10 z-20 relative group"
+    >
+
 
   {/* GitHub Icon */}
-  <motion.div 
-    className="relative"
-    whileHover="hover"
-    variants={{
-      hover: { y: -10 }
-    }}
-  >
+    <motion.div 
+        className="relative"
+        whileHover="hover"
+        variants={{
+        hover: { y: -10 }
+      }}
+    >
     <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-2xl -z-10 scale-90 group-hover:scale-100 transition-all" />
     
-    <a
-      href="https://github.com/Rhythm-Aphale"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-indigo-400 transition-all duration-300 group/github"
-    >
+      <a
+        href="https://github.com/Rhythm-Aphale"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-indigo-400 transition-all duration-300 group/github"
+      >
       {/* Animated Border */}
       <div className="absolute inset-0 rounded-xl overflow-hidden">
         <motion.div
@@ -220,7 +203,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <Github className="w-8 h-8 text-gray-300 group-hover/github:text-white transition-colors" />
+      <Github className="w-5 h-5 text-gray-300 group-hover/github:text-white transition-colors" />
     </a>
 
     {/* Animated Label */}
@@ -234,73 +217,7 @@ const Hero = () => {
       <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-purple-600 rotate-45" />
     </motion.span>
   </motion.div>
-
-  {/* Instagram Icon */}
-  <motion.div 
-    className="relative"
-    whileHover="hover"
-    variants={{
-      hover: { y: -10 }
-    }}
-  >
-    <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-2xl -z-10 scale-90 group-hover:scale-100 transition-all" />
-    
-    <a
-      href="https://www.instagram.com/Its_rhythm03"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-pink-400 transition-all duration-300 group/instagram"
-    >
-      {/* Animated Gradient */}
-      <motion.div
-        className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-500 to-orange-500 opacity-0 group-hover/instagram:opacity-30"
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      <Instagram className="w-8 h-8 text-gray-300 group-hover/instagram:text-white transition-colors" />
-      
-      {/* Floating Hearts */}
-      <div className="absolute inset-0 opacity-0 group-hover/instagram:opacity-100 transition-opacity">
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-pink-400"
-            initial={{ y: 0, opacity: 0 }}
-            animate={{
-              y: -30,
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              delay: i * 0.3,
-              repeat: Infinity,
-            }}
-          >
-            ❤️
-          </motion.div>
-        ))}
-      </div>
-    </a>
-
-    <motion.span
-      className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover/instagram:opacity-100 shadow-lg"
-      initial={{ y: 10 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 200 }}
-    >
-      Instagram
-      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-orange-600 rotate-45" />
-    </motion.span>
-  </motion.div>
-
+  
   {/* LinkedIn Icon */}
   <motion.div 
     className="relative"
@@ -315,7 +232,7 @@ const Hero = () => {
       href="https://www.linkedin.com/in/rhythm-aphale0302/"
       target="_blank"
       rel="noopener noreferrer"
-      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400 transition-all duration-300 group/linkedin"
+      className="relative flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400 transition-all duration-300 group/linkedin"
     >
       {/* Connection Lines Animation */}
       <div className="absolute inset-0 opacity-0 group-hover/linkedin:opacity-100 transition-opacity">
@@ -340,7 +257,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <Linkedin className="w-8 h-8 text-gray-300 group-hover/linkedin:text-white transition-colors" />
+      <Linkedin className="w-5 h-5 text-gray-300 group-hover/linkedin:text-white transition-colors" />
     </a>
 
     <motion.span
@@ -565,15 +482,15 @@ const Hero = () => {
         >
           <TypewriterEffect
          words={[
-          { text: "Rhythm", className: "text-blue-400" },
-          { text: "Aphale", className: "text-purple-400" },
-          { text: "|", className: "text-gray-500" },
-          { text: "Engineering", className: "text-blue-400" },
-          { text: "the", className: "text-purple-400" },
-          { text: "Future", className: "text-blue-500" },
-          { text: "of", className: "text-purple-500" },
-          { text: "Web", className: "text-blue-500" },
-          { text: "Innovation", className: "text-purple-500" },
+          { text: "Rhythm", className: "text-[#FCFB54]" },
+          { text: "Aphale", className: "text-[#FCFB54]" },
+          { text: "|", className: "text-[#FCFB54]" },
+          { text: "Engineering", className: "text-[#FCFB54]" },
+          { text: "the", className: "text-[#FCFB54]" },
+          { text: "Future", className: "text-[#FCFB54]" },
+          { text: "of", className: "text-[#FCFB54]" },
+          { text: "Web", className: "text-[#FCFB54]" },
+          { text: "Innovation", className: "text-[#FCFB54]" },
         ]}
         
             className="text-lg md:text-3xl font-semibold"
