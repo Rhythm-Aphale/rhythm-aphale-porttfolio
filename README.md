@@ -30,10 +30,7 @@ To run this portfolio locally, follow these steps:
 
 ```sh
 # Clone this repository
-git clone https://github.com/Rhythm-Aphale/your-portfolio.git
-
-# Navigate into the directory
-cd your-portfolio
+https://github.com/Rhythm-Aphale/rhythm-aphale-porttfolio.git
 
 # Install dependencies
 yarn install  # or npm install
