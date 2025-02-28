@@ -143,37 +143,220 @@ const Hero = () => {
       <Spotlight />
 
       {/* Social Icons */}
+      {/* Modified Social Icons Section - Place this below the buttons */}
+{/* Enhanced Social Icons Section */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 2.2, duration: 0.8 }}
+  className="mt-12 flex justify-center gap-10 z-20 relative group"
+>
+  {/* Shared Animated Background */}
+  <motion.div
+    className="absolute inset-0 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"
+    style={{
+      background: `linear-gradient(90deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
+    }}
+    animate={{
+      background: [
+        `linear-gradient(90deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
+        `linear-gradient(180deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
+        `linear-gradient(270deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
+        `linear-gradient(360deg, ${config.palette.primary} 0%, ${config.palette.accent} 100%)`,
+      ],
+    }}
+    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+  />
+
+  {/* GitHub Icon */}
+  <motion.div 
+    className="relative"
+    whileHover="hover"
+    variants={{
+      hover: { y: -10 }
+    }}
+  >
+    <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-2xl -z-10 scale-90 group-hover:scale-100 transition-all" />
+    
+    <a
+      href="https://github.com/Rhythm-Aphale"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-indigo-400 transition-all duration-300 group/github"
+    >
+      {/* Animated Border */}
+      <div className="absolute inset-0 rounded-xl overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover/github:opacity-30"
+          animate={{
+            x: [-100, 100],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
+
+      {/* Hover Particles */}
+      <div className="absolute inset-0 opacity-0 group-hover/github:opacity-100 transition-opacity">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-1 w-1 bg-purple-400 rounded-full"
+            initial={{ scale: 0 }}
+            animate={{
+              scale: [0, 1, 0],
+              x: Math.cos((i * 60 * Math.PI) / 180) * 40,
+              y: Math.sin((i * 60 * Math.PI) / 180) * 40,
+            }}
+            transition={{
+              duration: 1.2,
+              delay: i * 0.1,
+              repeat: Infinity,
+            }}
+          />
+        ))}
+      </div>
+
+      <Github className="w-8 h-8 text-gray-300 group-hover/github:text-white transition-colors" />
+    </a>
+
+    {/* Animated Label */}
+    <motion.span
+      className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover/github:opacity-100 shadow-lg"
+      initial={{ y: 10 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 200 }}
+    >
+      GitHub
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-purple-600 rotate-45" />
+    </motion.span>
+  </motion.div>
+
+  {/* Instagram Icon */}
+  <motion.div 
+    className="relative"
+    whileHover="hover"
+    variants={{
+      hover: { y: -10 }
+    }}
+  >
+    <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-2xl -z-10 scale-90 group-hover:scale-100 transition-all" />
+    
+    <a
+      href="https://www.instagram.com/Its_rhythm03"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-pink-400 transition-all duration-300 group/instagram"
+    >
+      {/* Animated Gradient */}
       <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-20"
-      >
-        <a 
-          href="https://github.com/Rhythm-Aphale" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-gray-900/50 p-3 rounded-full hover:bg-gray-800 transition-colors duration-300 backdrop-blur-sm border border-gray-700/50 hover:scale-110 transform"
-        >
-          <Github className="w-5 h-5 text-white" />
-        </a>
-        <a 
-          href="https://www.instagram.com/Its_rhythm03" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-gray-900/50 p-3 rounded-full hover:bg-gray-800 transition-colors duration-300 backdrop-blur-sm border border-gray-700/50 hover:scale-110 transform"
-        >
-          <Instagram className="w-5 h-5 text-white" />
-        </a>
-        <a 
-          href="https://www.linkedin.com/in/rhythm-aphale0302/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-gray-900/50 p-3 rounded-full hover:bg-gray-800 transition-colors duration-300 backdrop-blur-sm border border-gray-700/50 hover:scale-110 transform"
-        >
-          <Linkedin className="w-5 h-5 text-white" />
-        </a>
-      </motion.div>
+        className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-500 to-orange-500 opacity-0 group-hover/instagram:opacity-30"
+        animate={{
+          scale: [1, 1.2, 1],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
+
+      <Instagram className="w-8 h-8 text-gray-300 group-hover/instagram:text-white transition-colors" />
+      
+      {/* Floating Hearts */}
+      <div className="absolute inset-0 opacity-0 group-hover/instagram:opacity-100 transition-opacity">
+        {[...Array(3)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-pink-400"
+            initial={{ y: 0, opacity: 0 }}
+            animate={{
+              y: -30,
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              delay: i * 0.3,
+              repeat: Infinity,
+            }}
+          >
+            ❤️
+          </motion.div>
+        ))}
+      </div>
+    </a>
+
+    <motion.span
+      className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover/instagram:opacity-100 shadow-lg"
+      initial={{ y: 10 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 200 }}
+    >
+      Instagram
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-orange-600 rotate-45" />
+    </motion.span>
+  </motion.div>
+
+  {/* LinkedIn Icon */}
+  <motion.div 
+    className="relative"
+    whileHover="hover"
+    variants={{
+      hover: { y: -10 }
+    }}
+  >
+    <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-2xl -z-10 scale-90 group-hover:scale-100 transition-all" />
+    
+    <a
+      href="https://www.linkedin.com/in/rhythm-aphale0302/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-400 transition-all duration-300 group/linkedin"
+    >
+      {/* Connection Lines Animation */}
+      <div className="absolute inset-0 opacity-0 group-hover/linkedin:opacity-100 transition-opacity">
+        {[...Array(4)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-px bg-blue-400 w-8"
+            style={{
+              rotate: i * 45,
+              x: -16,
+              y: -16,
+            }}
+            animate={{
+              width: [0, 32, 0],
+            }}
+            transition={{
+              duration: 1.2,
+              delay: i * 0.2,
+              repeat: Infinity,
+            }}
+          />
+        ))}
+      </div>
+
+      <Linkedin className="w-8 h-8 text-gray-300 group-hover/linkedin:text-white transition-colors" />
+    </a>
+
+    <motion.span
+      className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover/linkedin:opacity-100 shadow-lg"
+      initial={{ y: 10 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 200 }}
+    >
+      LinkedIn
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-blue-700 rotate-45" />
+    </motion.span>
+  </motion.div>
+
+  {/* Connector Lines */}
+  <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent group-hover:via-indigo-500 transition-colors" />
+</motion.div>
 
       {/* Beam Effects */}
       {beams.map((beam) => (
@@ -414,7 +597,7 @@ const Hero = () => {
           transition={{ delay: 1.5 }}
           className="mt-8 flex flex-col md:flex-row gap-4 justify-center"
         >
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform text-xs md:text-base group">
+          <a href="https://drive.google.com/file/d/1EmsoStDR1d__59K1I1weRyboZnD5DPVO/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform text-xs md:text-base group">
             <span className="group-hover:translate-x-1 transition-transform">
               Resume
             </span>

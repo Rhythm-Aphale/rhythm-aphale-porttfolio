@@ -110,27 +110,27 @@ const Projects = () => {
     </LampContainer>
 
 
-      <div className="max-w-8xl mx-auto p-8 -mt-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-40">
+    <div className="max-w-8xl mx-auto p-4 md:p-8 -mt-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-40 md:gap-40">
           {projects.map((project, index) => (
             <motion.div 
               key={index} 
-              className="h-[30rem] w-[22rem] mx-auto"
+              className="h-[20rem] w-[18rem] md:h-[30rem] md:w-[22rem] mx-auto"
               initial={{ 
                 opacity: 0, 
                 y: 100,
-                boxShadow: "0 0 0 rgba(147, 51, 234, 0)"  // Start with no glow
+                boxShadow: "0 0 0 rgba(147, 51, 234, 0)"
               }}
               whileInView={{ 
                 opacity: 1, 
                 y: 0,
-                boxShadow: "0 0 15px rgba(147, 51, 234, 0.4)"  // Add subtle purple glow
+                boxShadow: "0 0 15px rgba(147, 51, 234, 0.4)"
               }}
               whileHover={{
-                boxShadow: "0 0 25px rgba(147, 51, 234, 0.7)"  // Enhance glow on hover
+                boxShadow: "0 0 25px rgba(147, 51, 234, 0.7)"
               }}
               transition={{
-                delay: 0.1 + index * 0.1, // Stagger effect
+                delay: 0.1 + index * 0.1,
                 duration: 0.8,
                 ease: "easeInOut",
               }}
@@ -139,37 +139,40 @@ const Projects = () => {
               <PinContainer
                 title={project.title}
                 href={project.githubRepo}
-                containerClassName="h-full w-full"
+                containerClassName="h-full w-full "
               >
-                <div className="flex flex-col h-full">
-                  {/* Image container with fixed height */}
-                  <div className="relative h-48 w-60">
+                <div className="flex flex-col h-full ">
+                  {/* Adjusted image container for mobile */}
+                  <div className="relative h-40 w-48 md:h-48 md:w-60 ">
                     {project.image ? (
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         className="object-contain rounded-t-lg"
+                        sizes="(max-width: 768px) 100vw, 
+                               (max-width: 1200px) 50vw,
+                               33vw"
                       />
                     ) : (
-                      <div className="bg-gray-800 h-full w-full rounded-t-lg flex items-center justify-center">
+                      <div className="bg-gray-800 h-full w-full rounded-t-lg flex items-center justify-center ">
                         <span className="text-gray-400">{project.title}</span>
                       </div>
                     )}
                   </div>
                   <div className="p-4 flex-grow flex flex-col justify-between">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2">
+                      <h3 className="text-lg md:text-xl font-bold text-white mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-gray-300 mb-4 line-clamp-3 overflow-hidden">
+                      <p className="text-xs md:text-sm text-gray-300 mb-4 line-clamp-2 md:line-clamp-3 overflow-hidden">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.split(", ").map((tech, i) => (
                           <span
                             key={i}
-                            className="px-2 py-1 text-xs bg-gray-800 rounded-full text-cyan-300"
+                            className="px-2 py-1 text-[0.6rem] md:text-xs bg-gray-800 rounded-full text-cyan-300"
                           >
                             {tech}
                           </span>
@@ -182,7 +185,7 @@ const Projects = () => {
                           href={project.liveLink}
                           target="_blank"
                           rel="noopener"
-                          className="text-cyan-300 hover:underline text-sm"
+                          className="text-cyan-300 hover:underline text-xs md:text-sm"
                           onClick={(e) => e.stopPropagation()}
                         >
                           Live Demo ↗
