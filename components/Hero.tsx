@@ -514,7 +514,7 @@ const Hero = () => {
           transition={{ delay: 1.5 }}
           className="mt-8 flex flex-col md:flex-row gap-4 justify-center"
         >
-          <a href="https://drive.google.com/file/d/1EmsoStDR1d__59K1I1weRyboZnD5DPVO/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform text-xs md:text-base group">
+          <a href="https://drive.google.com/file/d/1FLe3FyGOznWKmIkeA6Q8Z5fkzIEgWlYg/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform text-xs md:text-base group">
             <span className="group-hover:translate-x-1 transition-transform">
               Resume
             </span>
