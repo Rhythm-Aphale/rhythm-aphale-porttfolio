@@ -123,6 +123,20 @@ const Experience = () => {
   const experiences = [
     {
       title: "Frontend Developer Intern",
+      company: "AGETWARE",
+      location: "Remote",
+      duration: "Mar 2025 - Present",
+      points: [
+        "Developed responsive web applications using React and Next.js with Tailwind CSS",
+        "Implemented interactive UI components and animations with Framer Motion",
+        "Collaborated with designers to ensure pixel-perfect implementation of designs",
+        "Optimized web performance through code splitting and lazy loading techniques",
+        "Participated in code reviews and maintained high code quality standards"
+      ],
+      skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Figma","Gitlab", "TypeScript"]
+    },
+    {
+      title: "Frontend Developer Intern",
       company: "Sublime Experiences",
       location: "Remote",
       duration: "July - Dec 2024",
