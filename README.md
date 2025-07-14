@@ -9,9 +9,6 @@ Welcome to my **Next.js Portfolio**! This is my personal website where I showcas
 - **🔥 Next.js & TypeScript** - Optimized and scalable.
 - **🎨 Stunning UI/UX** - Inspired by **Spotify**, with smooth animations.
 - **📱 Fully Responsive** - Works across all devices.
-- **🎭 Dark & Light Mode** - Toggle between themes effortlessly.
-- **🖱️ Smooth Scroll** - Implemented with **Locomotive Scroll**.
-- **📷 Interactive Projects Showcase** - Using **Swiper.js** for smooth transitions.
 - **⚡ Fast & Optimized** - Built with **Server-Side Rendering (SSR)** and **Static Site Generation (SSG)**.
 - **🛠️ SEO Friendly** - Optimized for search engines.
 
