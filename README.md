@@ -7,7 +7,6 @@ Welcome to my **Next.js Portfolio**! This is my personal website where I showcas
 ## ✨ Features
 
 - **🔥 Next.js & TypeScript** - Optimized and scalable.
-- **🎨 Stunning UI/UX** - Inspired by **Spotify**, with smooth animations.
 - **📱 Fully Responsive** - Works across all devices.
 - **⚡ Fast & Optimized** - Built with **Server-Side Rendering (SSR)** and **Static Site Generation (SSG)**.
 - **🛠️ SEO Friendly** - Optimized for search engines.
