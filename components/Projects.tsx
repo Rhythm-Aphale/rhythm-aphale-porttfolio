@@ -22,57 +22,85 @@ interface ProjectCardProps {
 const Projects = () => {
   const projects = [
     {
-      title: "CellOnSell",
-      technologies: "Python, Django, HTML, CSS, JavaScript",
+      title: "MemeVerse",
+      technologies: "Next.js, TypeScript, Tailwind CSS, Firebase, Cloudinary",
       description:
-        "Developed a full-stack mobile-friendly website for showcasing and selling products. Implemented dynamic content updates, seamless navigation, and backend functionality using Django.",
-      githubRepo: "https://github.com/Rhythm-Aphale/CellOnSell",
-      image: "/images/cellonsell.png",
-    },
-    {
-      title: "HealthGuardian",
-      technologies: "Python",
-      description:
-        "Python-based health monitoring application with features for tracking health metrics and providing analytical insights.",
-      githubRepo: "https://github.com/Rhythm-Aphale/HealthGuardian",
-      image: "/images/healthguardian.png",
-    },
-    {
-      title: "SidcupFamilyGolf Website",
-      technologies: "HTML, CSS, JavaScript",
-      description:
-        "This is a fully responsive clone of the Sidcup Family Golf website, built using HTML, CSS, and JavaScript.",
-      githubRepo: "https://github.com/Rhythm-Aphale/sidcup-family-golf-clone",
-      liveLink: "brilliant-griffin-aa1123.netlify.app/",
-      image: "/images/sidcup.png",
+        "A multi-page interactive meme platform with meme browsing, uploading, AI-generated captions, profiles, leaderboard, dark mode, and Firebase Auth. Optimized for performance and user experience.",
+      githubRepo: "https://github.com/Rhythm-Aphale/memeverse",
+      liveLink: "https://memesverse.vercel.app/",
+      image: "/images/memeverse.png",
     },
     {
       title: "Engineer Management Dashboard",
       technologies:
         "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion",
       description:
-        "A modern, responsive web application to manage engineering team members with features like search, filtering, sorting, detailed profiles, status indicators, and smooth animations.",
+        "Responsive dashboard to manage engineers with search, filtering, sorting, status indicators, animations, and profile details. Built with modern stack and UI components.",
       githubRepo: "https://github.com/Rhythm-Aphale/engineers-dashboard",
-      liveLink: "https://engineers-dashboard.vercel.app/", 
+      liveLink: "https://engineers-dashboard.vercel.app/",
       image: "/images/engineers.png",
-    },
-    {
-      title: "MemeVerse",
-      technologies: "Next.js, TypeScript, Tailwind CSS, Firebase, Cloudinary",
-      description:
-        "A multi-page, interactive meme platform with features like meme browsing, uploading, AI-generated captions, user profiles, leaderboards, and Firebase authentication. Showcases animations, performance optimizations, and responsive design.",
-      githubRepo: "https://github.com/your-username/memeverse",
-      liveLink: "https://memesverse.vercel.app/",
-      image: "/images/memeverse.png",
     },
     {
       title: "EcomFakeStore",
       technologies: "Next.js, TypeScript, Tailwind CSS, Fakestore API",
       description:
-        "A Next.js e-commerce dashboard using Fake Store API with product browsing, cart, auth, admin panel, wishlist, and smooth animations.",
+        "E-commerce app featuring product browsing, wishlist, cart, login/authentication, admin panel, and responsive animations using Fake Store API.",
       githubRepo: "https://github.com/Rhythm-Aphale/project-frontend",
       liveLink: "https://ecomfakestore.netlify.app/",
       image: "/images/ecomfakestore.png",
+    },
+    {
+      title: "CellOnSell",
+      technologies: "Python, Django, HTML, CSS, JavaScript",
+      description:
+        "Mobile-friendly e-commerce platform built with Django. Includes product showcase, dynamic updates, and backend integration for managing listings.",
+      githubRepo: "https://github.com/Rhythm-Aphale/CellOnSell",
+      image: "/images/cellonsell.png",
+    },
+    {
+      title: "Quick Ecom",
+      technologies: "Next.js, Tailwind CSS",
+      description:
+        "A sleek frontend for an e-commerce site with product listing, modern UI/UX, and responsive layout.",
+      githubRepo: "https://github.com/Rhythm-Aphale/quick-ecom",
+      liveLink: "https://quick-ecom-vert.vercel.app/",
+      image: "/images/quickecom.png",
+    },
+    {
+      title: "AI Quiz Generator",
+      technologies: "Next.js, Gemini API, Tailwind CSS",
+      description:
+        "Create quizzes instantly using AI. Users input a topic and the app generates a quiz with multiple-choice questions. Built using OpenAI GPT.",
+      githubRepo: "https://github.com/Rhythm-Aphale/AI-Quiz-Generator",
+      liveLink: "https://ai-quiz-generator-three.vercel.app/",
+      image: "/images/aiquiz.png",
+    },
+    {
+      title: "WhatsApp Web UI Clone",
+      technologies: "Next.js, Node.js, websockets, Tailwind CSS, Zustand",
+      description:
+        "WhatsApp Web UI clone with working P2P messaging UI logic. Built for frontend performance and UI fidelity.",
+      githubRepo: "https://github.com/Rhythm-Aphale/whatsapp",
+      liveLink: "https://whatsapp-mu-seven.vercel.app/",
+      image: "/images/whatsappclone.png",
+    },
+    {
+      title: "Car Rent Admin Dashboard",
+      technologies: "Next.js, TypeScript, Tailwind CSS",
+      description:
+        "Admin dashboard for managing car rental listings with features like listing CRUD, responsive charts, and sleek UI.",
+      githubRepo: "https://github.com/Rhythm-Aphale/car-rent-dashboard",
+      liveLink: "https://car-rent-dashboard-phi.vercel.app/",
+      image: "/images/carrent.png",
+    },
+    {
+      title: "Sidcup Family Golf Website Clone",
+      technologies: "HTML, CSS, JavaScript",
+      description:
+        "Responsive clone of the Sidcup Family Golf website with interactive animations and custom fonts.",
+      githubRepo: "https://github.com/Rhythm-Aphale/sidcup-family-golf-clone",
+      liveLink: "https://brilliant-griffin-aa1123.netlify.app/",
+      image: "/images/sidcup.png",
     },
   ];
 
@@ -303,7 +331,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.liveLink && (
               <a
                 href={project.liveLink}
-                target="_blank"
+                target="blank"
                 rel="noopener noreferrer"
                 className="block w-full py-2 rounded-lg overflow-hidden group/btn relative"
               >

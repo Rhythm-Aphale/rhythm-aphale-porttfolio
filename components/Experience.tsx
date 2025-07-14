@@ -127,7 +127,7 @@ const Experience = () => {
       title: "Frontend Developer Intern",
       company: "AGETWARE",
       location: "Remote",
-      duration: "Mar 2025 - Present",
+      duration: "Mar 2025 - May 2025",
       points: [
         "Converted complex UI designs from Figma into high-quality, reusable React components",
         "Built responsive and accessible web applications using React and Next.js with Tailwind CSS",

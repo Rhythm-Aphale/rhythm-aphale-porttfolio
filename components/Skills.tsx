@@ -7,11 +7,26 @@ import { Sparkles as LucideSparkles } from 'lucide-react';
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, 
   FaGitAlt, FaGithub, FaDatabase, 
-  FaGitlab
+  FaGitlab,
+  FaBug,
+  FaCloud,
+  FaFigma,
+  FaMobileAlt,
+  FaServer,
+  FaUniversalAccess,
+  FaDocker,
+  FaAws
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiTailwindcss, SiNextdotjs, SiDjango, 
-  SiPostgresql, SiMysql, SiMongodb
+  SiPostgresql, SiMysql, SiMongodb,
+  SiCloudinary,
+  SiEslint,
+  SiFirebase,
+  SiFramer,
+  SiGreensock,
+  SiLighthouse,
+  SiPrettier
 } from 'react-icons/si';
 
 // Interface definitions
@@ -37,43 +52,61 @@ const Skills = () => {
   const skillCategories: SkillCategory[] = [
     {
       title: "Frontend Development",
-      description: "Creating responsive, interactive user interfaces with modern frameworks and technologies.",
-      color: "from-red-500/30 via-red-600/30 to-red-700/30",
-      icon: <FaReact className="text-red-400" />,
+      description: "Crafting responsive, accessible, and performant user interfaces using modern frameworks and design systems.",
+      color: "from-pink-500/30 via-pink-600/30 to-pink-700/30",
+      icon: <FaReact className="text-pink-400" />,
       skills: [
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
         { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
-        { name: "Next.js", icon: <SiNextdotjs className="text-[#000000]" /> },
-        { name: "HTML", icon: <FaHtml5 className="text-[#E34F26]" /> },
-        { name: "CSS", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
         { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+        { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" /> },
+        { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+        { name: "Framer Motion", icon: <SiFramer className="text-[#0055FF]" /> },
       ]
     },
     {
       title: "Backend Development",
-      description: "Building robust server-side applications with scalable architecture.",
+      description: "Developing scalable APIs, server-side logic, and secure backend systems.",
       color: "from-blue-500/30 via-blue-600/30 to-blue-700/30",
       icon: <FaNodeJs className="text-blue-400" />,
       skills: [
+        { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
         { name: "Python", icon: <FaPython className="text-[#3776AB]" /> },
         { name: "Django", icon: <SiDjango className="text-[#092E20]" /> },
-        { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+        { name: "REST APIs", icon: <FaServer className="text-gray-500" /> },
       ]
     },
     {
-      title: "Database Management",
-      description: "Designing optimized database systems for efficient data storage and retrieval.",
-      color: "from-green-500/30 via-green-600/30 to-green-700/30",
-      icon: <FaDatabase className="text-green-400" />,
+      title: "Database & Cloud",
+      description: "Designing and integrating cloud databases with real-time sync and performance optimization.",
+      color: "from-teal-500/30 via-teal-600/30 to-teal-700/30",
+      icon: <FaCloud className="text-teal-400" />,
       skills: [
+        { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
         { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+        { name: "Cloudinary", icon: <SiCloudinary className="text-[#3448C5]" /> },
+        { name: "Docker", icon: <FaDocker className="text-[#2496ED]" /> },
+        { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
       ]
     },
     {
-      title: "Version Control",
-      description: "Managing code changes and collaborating effectively with team members.",
+      title: "UI/UX & Design Tools",
+      description: "Creating pixel-perfect layouts and animations with focus on design consistency and user experience.",
+      color: "from-purple-500/30 via-purple-600/30 to-purple-700/30",
+      icon: <FaFigma className="text-purple-400" />,
+      skills: [
+        { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
+        { name: "GSAP", icon: <SiGreensock className="text-[#88CE02]" /> },
+        { name: "Responsive Design", icon: <FaMobileAlt className="text-blue-400" /> },
+        { name: "Accessibility (a11y)", icon: <FaUniversalAccess className="text-green-500" /> },
+      ]
+    },
+    {
+      title: "Version Control & Collaboration",
+      description: "Collaborating efficiently with Git and managing codebases across platforms.",
       color: "from-yellow-500/30 via-yellow-600/30 to-yellow-700/30",
       icon: <FaGithub className="text-yellow-400" />,
       skills: [
@@ -81,11 +114,22 @@ const Skills = () => {
         { name: "GitHub", icon: <FaGithub className="text-[#181717]" /> },
         { name: "GitLab", icon: <FaGitlab className="text-[#E24329]" /> },
       ]
-    }
-  ];
+    },
+    {
+      title: "Testing & Optimization",
+      description: "Ensuring performance, reliability, and bug-free deployments through effective testing strategies.",
+      color: "from-emerald-500/30 via-emerald-600/30 to-emerald-700/30",
+      icon: <FaBug className="text-emerald-400" />,
+      skills: [
+        { name: "Lighthouse", icon: <SiLighthouse className="text-[#FFA500]" /> },
+        { name: "ESLint", icon: <SiEslint className="text-[#4B32C3]" /> },
+        { name: "Prettier", icon: <SiPrettier className="text-[#F7B93E]" /> },
+      ]
+  }
+];
 
-  // Reference to skills section for smooth scrolling
-  const skillsRef = useRef<HTMLDivElement>(null);
+// Reference to skills section for smooth scrolling
+const skillsRef = useRef<HTMLDivElement>(null);
 
   return (
     <div ref={skillsRef} className="overflow-hidden">
