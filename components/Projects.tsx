@@ -50,6 +50,16 @@ const Projects = () => {
       image: "/images/ecomfakestore.png",
     },
     {
+      title: "HabitForge",
+      technologies: "Next.js, TypeScript, Tailwind CSS, shadcn/ui",
+      description:
+        "A responsive habit tracker with OTP-style authentication, streak tracking, category filtering, pure black dark mode, and smooth animations — built with Next.js and shadcn/ui.",
+      githubRepo: "https://github.com/Rhythm-Aphale/HabitForge",
+      liveLink: "https://habit-forge-xi.vercel.app/",
+      image: "/images/habitforge.png",
+    },
+
+    {
       title: "CellOnSell",
       technologies: "Python, Django, HTML, CSS, JavaScript",
       description:
